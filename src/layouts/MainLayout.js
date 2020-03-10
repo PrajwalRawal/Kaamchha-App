@@ -75,7 +75,7 @@ export default ({children, scrollview}) => {
                     borderRadius: 5,
                     borderWidth: 1,
                     borderColor: colors.grey,
-                    backgroundColor: colors.white,
+                    backgroundColor: colors.primary,
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexDirection: 'row',
@@ -97,7 +97,12 @@ export default ({children, scrollview}) => {
                     )
                   }>
                   <Image source={image} style={{width: 15, height: 15}} />
-                  <Text style={{color: 'black', fontSize: 16, marginLeft: 5}}>
+                  <Text
+                    style={{
+                      color: colors.white,
+                      fontSize: 16,
+                      marginLeft: 5,
+                    }}>
                     {lang}
                   </Text>
                 </Button>
@@ -115,7 +120,6 @@ export default ({children, scrollview}) => {
                 : Dimensions.get('screen').height -
                   120 -
                   StatusBar.currentHeight,
-            marginBottom: 60,
           }}>
           {children}
         </ScrollView>
@@ -128,7 +132,6 @@ export default ({children, scrollview}) => {
                 : Dimensions.get('screen').height -
                   120 -
                   StatusBar.currentHeight,
-            marginBottom: 60,
           }}>
           {children}
         </View>
