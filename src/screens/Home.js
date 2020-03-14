@@ -9,9 +9,9 @@ import {
   TouchableOpacity,
   Button,
 } from 'react-native';
+import colors from '../assets/colors';
 import MainLayout from '../layouts/MainLayout';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
-import colors from '../assets/colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default () => {
@@ -320,8 +320,7 @@ export default () => {
     <MainLayout scrollview>
       <View
         style={{
-          flex: 1,
-          backgroundColor: 'white',
+          backgroundColor: colors.bgColor,
         }}>
         <View style={{position: 'relative', alignItems: 'center'}}>
           <Carousel
@@ -362,19 +361,24 @@ export default () => {
           style={{
             marginLeft: 10,
             marginRight: 10,
-            marginBottom: 20,
+            marginBottom: 10,
           }}>
           <Text
             style={{
               fontSize: 18,
-              fontWeight: 'bold',
               marginTop: 20,
+              fontWeight: 'bold',
               marginBottom: 20,
             }}>
             Kaamchha Stats
           </Text>
           <FlatList
-            style={{marginLeft: -10, marginRight: -10, paddingLeft: 10}}
+            style={{
+              marginLeft: -10,
+              marginRight: -10,
+              paddingLeft: 10,
+              marginBottom: 20,
+            }}
             data={StatsData}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
@@ -416,13 +420,17 @@ export default () => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              marginTop: 20,
               marginBottom: 20,
             }}>
             Categories
           </Text>
           <FlatList
-            style={{marginLeft: -10, marginRight: -10}}
+            style={{
+              marginLeft: -10,
+              marginRight: -10,
+              marginBottom: 20,
+              backgroundColor: colors.white,
+            }}
             data={CategoriesData}
             keyExtractor={item => item.id.toString()}
             numColumns={4}
@@ -455,13 +463,17 @@ export default () => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              marginTop: 20,
               marginBottom: 20,
             }}>
             Latest News
           </Text>
           <FlatList
-            style={{marginLeft: -10, marginRight: -10, paddingLeft: 10}}
+            style={{
+              marginLeft: -10,
+              marginRight: -10,
+              paddingLeft: 10,
+              marginBottom: 20,
+            }}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             data={LatestNewsData}
@@ -509,14 +521,20 @@ export default () => {
                           marginTop: 15,
                         }}>
                         <View
-                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
                           <Icon name="calendar-o" size={15} />
                           <Text style={{marginLeft: 5, color: '#9E9FA0'}}>
                             {item.date}
                           </Text>
                         </View>
                         <View
-                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
                           <Icon name="user-o" size={15} />
                           <Text style={{marginLeft: 5, color: '#9E9FA0'}}>
                             {item.publisher}
@@ -533,13 +551,17 @@ export default () => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              marginTop: 20,
               marginBottom: 20,
             }}>
             Latest Trainings
           </Text>
           <FlatList
-            style={{marginLeft: -10, marginRight: -10, paddingLeft: 10}}
+            style={{
+              marginLeft: -10,
+              marginRight: -10,
+              paddingLeft: 10,
+              marginBottom: 20,
+            }}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             data={LatestTrainingsData}
@@ -610,13 +632,17 @@ export default () => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              marginTop: 20,
               marginBottom: 20,
             }}>
             Recent Events
           </Text>
           <FlatList
-            style={{marginLeft: -10, marginRight: -10, paddingLeft: 10}}
+            style={{
+              marginLeft: -10,
+              marginRight: -10,
+              paddingLeft: 10,
+              marginBottom: 20,
+            }}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             data={RecentEventsData}
@@ -685,7 +711,6 @@ export default () => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              marginTop: 20,
               marginBottom: 20,
             }}>
             Kaamchha Apprenticeship
@@ -694,6 +719,7 @@ export default () => {
             source={require('../assets/Apprenticeship.png')}
             style={{
               height: 60,
+              marginBottom: 20,
               width: Dimensions.get('screen').width - 20,
               resizeMode: 'cover',
             }}
@@ -702,13 +728,18 @@ export default () => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              marginTop: 20,
-              marginBottom: 10,
+              marginBottom: 20,
             }}>
             Development Partners
           </Text>
           <FlatList
-            style={{marginLeft: -10, marginRight: -10, paddingLeft: 10}}
+            style={{
+              marginLeft: -10,
+              marginRight: -10,
+              marginBottom: 20,
+              paddingLeft: 10,
+              backgroundColor: colors.white,
+            }}
             data={DevelopmentPartnersData}
             keyExtractor={item => item.id.toString()}
             horizontal={true}
@@ -717,8 +748,6 @@ export default () => {
               return (
                 <View
                   style={{
-                    borderWidth: 1,
-                    borderColor: '#eaeaea',
                     padding: 5,
                     marginRight: 15,
                   }}>
@@ -738,13 +767,18 @@ export default () => {
             style={{
               fontSize: 18,
               fontWeight: 'bold',
-              marginTop: 20,
-              marginBottom: 10,
+              marginBottom: 20,
             }}>
             Project Partners
           </Text>
           <FlatList
-            style={{marginLeft: -10, marginRight: -10, paddingLeft: 10}}
+            style={{
+              marginLeft: -10,
+              marginRight: -10,
+              marginBottom: 20,
+              paddingLeft: 10,
+              backgroundColor: colors.white,
+            }}
             data={ProjectPartnersData}
             keyExtractor={item => item.id.toString()}
             horizontal={true}
@@ -753,8 +787,8 @@ export default () => {
               return (
                 <View
                   style={{
-                    borderWidth: 1,
-                    borderColor: '#eaeaea',
+                    // borderWidth: 1,
+                    // borderColor: '#eaeaea',
                     padding: 5,
                     marginRight: 15,
                   }}>
