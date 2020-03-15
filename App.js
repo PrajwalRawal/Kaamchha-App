@@ -21,7 +21,7 @@ const Stack = createStackNavigator();
 const BottomTabs = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Category"
       tabBarOptions={{
         activeTintColor: colors.primary,
         style: {minHeight: 60},
@@ -83,7 +83,7 @@ const BottomTabs = () => {
 
 const Category = () => {
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator headerMode="none" initialRouteName="PeopleDetails">
       <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
       <Stack.Screen name="PeopleListings" component={PeopleListings} />
       <Stack.Screen name="PeopleDetails" component={PeopleDetails} />

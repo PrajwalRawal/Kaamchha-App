@@ -62,16 +62,20 @@ export default ({navigation}) => {
   ];
 
   return (
-    <MainLayout title="Carpenter" navigation={navigation} scrollview>
-      <View style={{margin: 10}}>
+    <MainLayout title="Carpenter" navigation={navigation}>
+      <View
+        style={{
+          position: 'relative',
+          width: Dimensions.get('screen').width,
+        }}>
         <FlatList
+          style={{marginBottom: 60}}
           data={PeopleListData}
           keyExtractor={item => item.id.toString()}
           renderItem={({item}) => {
             return (
               <TouchableOpacity
                 activeOpacity={0.9}
-                onPress={() => ''}
                 style={styles.peopleWrapper}
                 onPress={() => navigation.navigate('PeopleDetails')}>
                 <Image
@@ -82,7 +86,7 @@ export default ({navigation}) => {
                 <View
                   style={{
                     marginLeft: 10,
-                    width: Dimensions.get('screen').width - 160,
+                    width: Dimensions.get('screen').width - 140,
                   }}>
                   <View
                     style={{
@@ -139,15 +143,60 @@ export default ({navigation}) => {
           }}
         />
       </View>
+      <View
+        style={{
+          backgroundColor: 'white',
+          flexDirection: 'row',
+          position: 'absolute',
+          bottom: 0,
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: Dimensions.get('screen').width,
+          height: 60,
+          padding: 10,
+        }}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          activeOpacity={0.5}
+          onPress={() => ''}>
+          <Icon name="sort-variant" size={25} style={{color: colors.primary}} />
+          <Text
+            style={{
+              fontSize: 18,
+              marginLeft: 15,
+              color: colors.primary,
+            }}>
+            Sort
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{...styles.buttonContainer, paddingLeft: 0}}
+          onPress={() => ''}
+          activeOpacity={0.5}>
+          <Icon
+            name="filter-outline"
+            size={25}
+            style={{color: colors.primary}}
+          />
+          <Text
+            style={{
+              fontSize: 18,
+              marginLeft: 15,
+              color: colors.primary,
+            }}>
+            Filter
+          </Text>
+        </TouchableOpacity>
+      </View>
     </MainLayout>
   );
 };
 
 const styles = StyleSheet.create({
   peopleWrapper: {
-    width: Dimensions.get('screen').width - 20,
+    flex: 1,
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     flexDirection: 'row',
     padding: 10,
     borderColor: '#eaeaea',
@@ -163,5 +212,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     borderColor: '#eaeaea',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 40,
+    width: (Dimensions.get('screen').width - 30) / 2,
+    borderRadius: 5,
+    backgroundColor: '#d3e7f5',
+    borderWidth: 1,
+    borderColor: '#d3e7f5',
   },
 });

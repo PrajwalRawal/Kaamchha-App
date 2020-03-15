@@ -147,7 +147,7 @@ export default ({children, scrollview, title, navigation}) => {
               style={{
                 height:
                   Platform.OS === 'ios'
-                    ? Dimensions.get('window').height - 180
+                    ? Dimensions.get('window').height - 188
                     : Dimensions.get('window').height -
                       120 -
                       StatusBar.currentHeight,
@@ -159,7 +159,7 @@ export default ({children, scrollview, title, navigation}) => {
               style={{
                 height:
                   Platform.OS === 'ios'
-                    ? Dimensions.get('window').height - 180
+                    ? Dimensions.get('window').height - 188
                     : Dimensions.get('window').height -
                       120 -
                       StatusBar.currentHeight,
