@@ -224,6 +224,26 @@ export default ({navigation}) => {
                       {item.date}
                     </Text>
                   </Text>
+                  <TouchableOpacity
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      borderRadius: 5,
+                      backgroundColor: colors.primary,
+                      height: 35,
+                      width: 100,
+                      marginTop: 10,
+                    }}
+                    activeOpacity={0.8}>
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        fontWeight: 'bold',
+                        color: colors.white,
+                      }}>
+                      Details
+                    </Text>
+                  </TouchableOpacity>
                 </View>
               </View>
             );
@@ -234,7 +254,10 @@ export default ({navigation}) => {
   };
 
   return (
-    <MainLayout title="Samsad Ansari" navigation={navigation} scrollview>
+    <MainLayout
+      title="Samsad Ansari (Carpenter)"
+      navigation={navigation}
+      scrollview>
       <View
         style={{
           margin: 10,
@@ -514,8 +537,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   trainingImage: {
-    height: 110,
-    width: 110,
+    height: Platform.OS === 'ios' ? 110 : 130,
+    width: Platform.OS === 'ios' ? 110 : 130,
     resizeMode: 'cover',
     borderRadius: 5,
   },
