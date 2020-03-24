@@ -1,28 +1,28 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @types/react-native-slider
+  /usr/local/Cellar/node/13.11.0/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add @types/react-native-table-component
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prajw\bin;C:\Python27;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Users\prajw\AppData\Local\Microsoft\WindowsApps;C:\Users\prajw\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prajw\AppData\Roaming\npm;C:\Users\prajw\AppData\Local\Yarn\bin;C:\Users\prajw\AppData\Local\Android\Sdk\platform-tools
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/prajwalrawal/Library/Android/sdk/emulator:/Users/prajwalrawal/Library/Android/sdk/tools:/Users/prajwalrawal/Library/Android/sdk/tools/bin:/Users/prajwalrawal/Library/Android/sdk/platform-tools:/Users/prajwalrawal/Library/Android/sdk/emulator:/Users/prajwalrawal/Library/Android/sdk/tools:/Users/prajwalrawal/Library/Android/sdk/tools/bin:/Users/prajwalrawal/Library/Android/sdk/platform-tools
 
 Yarn version: 
-  1.22.0
+  1.22.4
 
 Node version: 
-  13.10.1
+  13.11.0
 
 Platform: 
-  win32 x64
+  darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2freact-native-slider: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66084:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140727:22)
-      at Request.emit (events.js:316:20)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141699:10)
-      at Request.emit (events.js:316:20)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141621:12)
-      at Object.onceWrapper (events.js:422:28)
-      at IncomingMessage.emit (events.js:328:22)
+  Error: https://registry.yarnpkg.com/@types%2freact-native-table-component: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:66987:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
       at endReadableNT (_stream_readable.js:1201:12)
       at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
@@ -54,6 +54,7 @@ npm manifest:
       "react-native-slider": "^0.11.0",
       "react-native-snap-carousel": "^3.8.4",
       "react-native-stars": "^1.1.6",
+      "react-native-table-component": "^1.2.1",
       "react-native-vector-icons": "^6.6.0",
       "react-native-web": "~0.11.7"
     },
@@ -4605,6 +4606,11 @@ Lockfile:
     version "1.1.6"
     resolved "https://registry.yarnpkg.com/react-native-stars/-/react-native-stars-1.1.6.tgz#b9e8f5dade7b90488acc39c9f07074551a31d652"
     integrity sha512-QnFgxHtGXlx2uPhG9w8pTQ27FBluSi5dVPtNVGhcOnaOSYp3hvVNbdCLfylLlJ7EjVDxsI3+GaO6wzzo/O3u3A==
+  
+  react-native-table-component@^1.2.1:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/react-native-table-component/-/react-native-table-component-1.2.1.tgz#5f1e0f159b1dff9df0d5601c4a5ab99d1aa99a25"
+    integrity sha512-sapwO0bONfQtpWg3GVMwP5D3lGEJlxPB3c7fb0soXBynvCa+SBktacVZ9OmYJnIbRJ3uW5pS4tzNc8GmE+UScw==
   
   react-native-vector-icons@^6.6.0:
     version "6.6.0"

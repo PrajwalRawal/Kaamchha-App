@@ -18,56 +18,48 @@ export default ({navigation}) => {
     {
       id: 1,
       image: require('../assets/Person.jpg'),
-      name: 'Samsad Ansari',
-      location: 'New Road',
-      city: 'Kathmandu',
-      district: 'Kathmandu',
+      name: 'Devendra Sharma',
+      location: 'Gwarko',
+      city: 'Lalitpur',
+      district: 'Lalitpur',
     },
     {
       id: 2,
       image: require('../assets/Person.jpg'),
-      name: 'Samsad Ansari',
-      address: 'New Road, Kathmandu',
-      location: 'New Road',
-      city: 'Kathmandu',
-      district: 'Kathmandu',
+      name: 'Devendra Sharma',
+      location: 'Gwarko',
+      city: 'Lalitpur',
+      district: 'Lalitpur',
     },
     {
       id: 3,
       image: require('../assets/Person.jpg'),
-      name: 'Samsad Ansari',
-      address: 'New Road, Kathmandu',
-      location: 'New Road',
-      city: 'Kathmandu',
-      district: 'Kathmandu',
+      name: 'Devendra Sharma',
+      location: 'Gwarko',
+      city: 'Lalitpur',
+      district: 'Lalitpur',
     },
     {
       id: 4,
       image: require('../assets/Person.jpg'),
-      name: 'Samsad Ansari',
-      address: 'New Road, Kathmandu',
-      location: 'New Road',
-      city: 'Kathmandu',
-      district: 'Kathmandu',
+      name: 'Devendra Sharma',
+      location: 'Gwarko',
+      city: 'Lalitpur',
+      district: 'Lalitpur',
     },
     {
       id: 5,
       image: require('../assets/Person.jpg'),
-      name: 'Samsad Ansari',
-      address: 'New Road, Kathmandu',
-      location: 'New Road',
-      city: 'Kathmandu',
-      district: 'Kathmandu',
+      name: 'Devendra Sharma',
+      location: 'Gwarko',
+      city: 'Lalitpur',
+      district: 'Lalitpur',
     },
   ];
 
   return (
     <MainLayout title="Carpenter" navigation={navigation}>
-      <View
-        style={{
-          position: 'relative',
-          width: Dimensions.get('screen').width,
-        }}>
+      <View style={{position: 'relative'}}>
         <FlatList
           style={{marginBottom: 60}}
           data={PeopleListData}
@@ -118,7 +110,7 @@ export default ({navigation}) => {
                     District:{' '}
                     <Text style={{color: '#555'}}>{item.district}</Text>
                   </Text>
-                  <View style={{marginTop: 20, flexDirection: 'row-reverse'}}>
+                  <View style={{flexDirection: 'row-reverse'}}>
                     <Stars
                       default={5}
                       count={5}
@@ -142,51 +134,55 @@ export default ({navigation}) => {
             );
           }}
         />
-      </View>
-      <View
-        style={{
-          backgroundColor: 'white',
-          flexDirection: 'row',
-          position: 'absolute',
-          bottom: 0,
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          width: Dimensions.get('screen').width,
-          height: 60,
-          padding: 10,
-        }}>
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          activeOpacity={0.5}
-          onPress={() => ''}>
-          <Icon name="sort-variant" size={25} style={{color: colors.primary}} />
-          <Text
-            style={{
-              fontSize: 18,
-              marginLeft: 15,
-              color: colors.primary,
-            }}>
-            Sort
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{...styles.buttonContainer, paddingLeft: 0}}
-          onPress={() => ''}
-          activeOpacity={0.5}>
-          <Icon
-            name="filter-outline"
-            size={25}
-            style={{color: colors.primary}}
-          />
-          <Text
-            style={{
-              fontSize: 18,
-              marginLeft: 15,
-              color: colors.primary,
-            }}>
-            Filter
-          </Text>
-        </TouchableOpacity>
+        <View
+          style={{
+            backgroundColor: 'white',
+            flexDirection: 'row',
+            position: 'absolute',
+            bottom: 0,
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            width: Dimensions.get('screen').width,
+            height: 60,
+            padding: 10,
+          }}>
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            activeOpacity={0.5}
+            onPress={() => ''}>
+            <Icon
+              name="sort-variant"
+              size={25}
+              style={{color: colors.primary}}
+            />
+            <Text
+              style={{
+                fontSize: 18,
+                marginLeft: 15,
+                color: colors.primary,
+              }}>
+              Sort
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{...styles.buttonContainer, paddingLeft: 0}}
+            onPress={() => ''}
+            activeOpacity={0.5}>
+            <Icon
+              name="filter-outline"
+              size={25}
+              style={{color: colors.primary}}
+            />
+            <Text
+              style={{
+                fontSize: 18,
+                marginLeft: 15,
+                color: colors.primary,
+              }}>
+              Filter
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </MainLayout>
   );
@@ -202,7 +198,7 @@ const styles = StyleSheet.create({
     borderColor: '#eaeaea',
     borderWidth: 1,
     borderRadius: 5,
-    marginBottom: 10,
+    marginBottom: 5,
     backgroundColor: 'white',
   },
   peopleImage: {

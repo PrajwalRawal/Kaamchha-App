@@ -148,9 +148,11 @@ export default ({children, scrollview, title, navigation}) => {
                 height:
                   Platform.OS === 'ios'
                     ? Dimensions.get('window').height - 188
-                    : Dimensions.get('window').height -
-                      120 -
+                    : Dimensions.get('screen').height -
+                      150 -
                       StatusBar.currentHeight,
+                marginBottom: 60,
+                paddingBottom: 15,
               }}>
               {children}
             </ScrollView>
@@ -160,9 +162,11 @@ export default ({children, scrollview, title, navigation}) => {
                 height:
                   Platform.OS === 'ios'
                     ? Dimensions.get('window').height - 188
-                    : Dimensions.get('window').height -
-                      120 -
+                    : Dimensions.get('screen').height -
+                      150 -
                       StatusBar.currentHeight,
+                marginBottom: 60,
+                paddingBottom: 15,
               }}>
               {children}
             </View>
